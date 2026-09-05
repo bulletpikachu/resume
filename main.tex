@@ -122,7 +122,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of California, Irvine}{Irvine, CA}
-      {Bachelor of Science in Software Engineering}{Sept. 2026 -- June 2028}
+      {Bachelor of Science in Software Engineering}{Sept. 2026 -- Expected June 2028}
     \resumeSubheading
       {De Anza College}{Cupertino, CA}
       {Coursework in Computer Science}{Sept. 2025 -- June 2026}
@@ -134,41 +134,56 @@
       \resumeProjectHeading
           {\textbf{LLM Discord Harness} $|$ \emph{Python, Docker, OpenRouter, Google AI Studio, Groq, SQLite}}{May 2026 -- Present}
           \resumeItemListStart
-            \resumeItem{Built a Python conversational LLM agent that runs at zero cost, sustaining 4 requests per second continuously (14,400/day) within provider quotas.}
-            \resumeItem{Dockerized and deployed 24/7 on a completely free self-managed cloud server for use on a UCI club discord server with 100+ members. Uses web search and a local Wikipedia to provide information and respond to any user questions.}
-            \resumeItem{Processes requests through a multi-round tool-calling loop with function dispatch and reasoning tracing for API compatibility across multiple different providers.}
-            \resumeItem{Designed a two-tier memory system pairing a bounded per-channel message buffer with SQLite-backed vector retrieval, embedding facts via FastEmbed (BGE), ranking by cosine similarity and importance, and deduplicating near-identical entries to keep injected context small.}
+            \resumeItem{Built a Python conversational LLM agent that runs at zero cost, sustaining 10 requests per minute continuously (14,400/day) within provider quotas.}
+            \resumeItem{Built a CI/CD pipeline with GitHub Actions to automatically deploy changes from the main branch to the production server, where it is online 24/7 for use on a UCI club discord server with 100+ members. }
+            \resumeItem{Built agent tools for live web search, HTML page fetch/extraction, and offline Wikipedia retrieval from a local Kiwix ZIM archive, with search-then-read so the model can follow snippets to full articles.}
+            \resumeItem{Designed and implemented a two-tier memory system pairing a per-channel message short-term memory with SQLite-backed vector retrieval, embedding facts via FastEmbed (BGE), ranking by cosine similarity and importance, and deduplicating near-identical entries to keep injected context small.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Cloud Server Management} $|$ \emph{Oracle Linux, Docker, Caddy}}{Nov 2025 -- Present}
+           {\textbf{Poker Ledger} $|$ \emph{Flask, Javascript, CSS, HTML, SQLite}}
+           {June 2026}
+           \resumeItemListStart
+             \resumeItem{Created a Flask and SQLite application for managing home poker sessions, tracking buy-ins, rebuys, cash-outs, and settlements while calculating player profits and a cumulative leaderboard.}
+             \resumeItem{Deployed in local home games, tracking a 5-figure balance across many sessions for 37 unique players.}
+           \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Election Validator} $|$ \emph{HTML}}
+          {May 2026}
           \resumeItemListStart
-            \resumeItem{Administer an always-free Oracle Cloud ARM instance on Oracle Linux, hosting seven containerized services at zero monthly cost with 100+ days of continuous uptime.}
+             \resumeItem{Created a lightweight HTML web app to count votes and verify election eligibility for De Anza’s Vietnamese Student Association, verifying 170 eligible club members.}
+             \resumeItem{Self-deployed 24/7 for board members to use in future years and elections on an Oracle VPS.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Cloud Server Management} $|$ \emph{Oracle Linux, Docker, Docker Compose, Caddy}}{Nov 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Administer an Oracle Cloud ARM instance on Oracle Linux, hosting seven containerized services at zero monthly cost with 100+ days of continuous uptime.}
             \resumeItem{Front all public traffic with Caddy as a reverse proxy handling automatic TLS across four subdomains.}
-            \resumeItem{Deploy Docker Compose stacks with restart policies for a \href{https://bulletmaji.me}{personal site}, a SearXNG search engine instance, a file-sharing/hosting app, and the LLM Discord bot running with named volumes for SQLite memory and analytics.}
+            \resumeItem{Deploy Docker Compose stacks with restart policies for a \href{https://bulletmaji.me}{personal site}, a SearXNG search engine instance, a file-sharing/hosting app, and the LLM Discord harness running 24/7.}
             \resumeItem{Operate two JVM game servers with 8 GB memory heap caps administered through PufferPanel.}
           \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Personal Web Applications} $|$ \emph{Next.js, TypeScript, Flask, SQLite, Node.js, WebSockets}}{Nov 2025 -- Present}
-          \resumeItemListStart
-            \resumeItem{\textbf{Portfolio \& CMS}: Built and self-hosted a Next.js portfolio with a custom file-based MDX content management system, including an authenticated admin interface and REST API for creating, editing, and deleting blog and diary posts.}
-            \resumeItem{\textbf{Local Messaging App}: Developed a lightweight real-time group chat using Node.js and WebSockets, with message history for new users, persistent display names, input validation, and automatic reconnection.}
-            \resumeItem{\textbf{Poker Ledger}: Created a Flask and SQLite application for managing home poker sessions, tracking buy-ins, rebuys, cash-outs, and settlements while calculating player profits and a cumulative leaderboard.}
-          \resumeItemListEnd  
     \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
 
-      
+    \resumeSubheading
+      {Camp Counselor}{July 2024 -- August 2026}
+      {California Youth Symphony}{Palo Alto, California}
+      \resumeItemListStart
+        \resumeItem{Created a lightweight real-time messaging app using Node.js and WebSockets, designed to be hosted on an offline local network to allow instant internal communication in an internet-dead forest.} 
+        \resumeItem{Achieved text communication from distances up to 200 ft by broadcasting a Wi-Fi signal from a consumer Macbook that any mobile device can connect and enter the chat with.}
+        \resumeItem{Designed, organized, and led daily recreational and social activities for 100+ high school musicians, serving as the primary source of engagement outside rehearsals.}
+      \resumeItemListEnd
 
 %
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python} \\
-     \textbf{Frameworks}{: React, Node.js, Flask} \\
-     \textbf{Developer Tools}{: Git, Docker} \\
-     \textbf{Libraries}{: pandas} \\
+     \textbf{Languages}{: Java, Python, JavaScript, TypeScript, SQL, HTML/CSS} \\
+     \textbf{Frameworks}{: React, Next.js, Node.js, Flask} \\
+     \textbf{Developer Tools}{: Git, Github Actions, Docker, Docker Compose, Linux, Caddy} \\
      \textbf{Interests}{: Classical music, French horn, modern Tetris, my three cats}
     }}
  \end{itemize}
