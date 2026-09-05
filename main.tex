@@ -1,0 +1,178 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\hypersetup{
+    colorlinks=true,    
+    urlcolor=blue
+    }
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape David Kim} \\ \vspace{1pt}
+    \small (650) 804-5445 $|$ \href{mailto:davidsehyunkim0@gmail.com}{\underline{davidsehyunkim0@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/david-kim-9a6a2927b/}{\underline{linkedin.com/in/david-kim-9a6a2927b/}} $|$
+    \href{https://github.com/bulletpikachu}{\underline{github.com/bulletpikachu}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Irvine}{Irvine, CA}
+      {Bachelor of Science in Software Engineering}{Sept. 2026 -- June 2028}
+    \resumeSubheading
+      {De Anza College}{Cupertino, CA}
+      {Coursework in Computer Science}{Sept. 2025 -- June 2026}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{LLM Discord Harness} $|$ \emph{Python, Docker, OpenRouter, Google AI Studio, Groq, SQLite}}{May 2026 -- Present}
+          \resumeItemListStart
+            \resumeItem{Built a Python conversational LLM agent that runs at zero cost, sustaining 4 requests per second continuously (14,400/day) within provider quotas.}
+            \resumeItem{Dockerized and deployed 24/7 on a completely free self-managed cloud server for use on a UCI club discord server with 100+ members. Uses web search and a local Wikipedia to provide information and respond to any user questions.}
+            \resumeItem{Processes requests through a multi-round tool-calling loop with function dispatch and reasoning tracing for API compatibility across multiple different providers.}
+            \resumeItem{Designed a two-tier memory system pairing a bounded per-channel message buffer with SQLite-backed vector retrieval, embedding facts via FastEmbed (BGE), ranking by cosine similarity and importance, and deduplicating near-identical entries to keep injected context small.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Cloud Server Management} $|$ \emph{Oracle Linux, Docker, Caddy}}{Nov 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Administer an always-free Oracle Cloud ARM instance on Oracle Linux, hosting seven containerized services at zero monthly cost with 100+ days of continuous uptime.}
+            \resumeItem{Front all public traffic with Caddy as a reverse proxy handling automatic TLS across four subdomains.}
+            \resumeItem{Deploy Docker Compose stacks with restart policies for a \href{https://bulletmaji.me}{personal site}, a SearXNG search engine instance, a file-sharing/hosting app, and the LLM Discord bot running with named volumes for SQLite memory and analytics.}
+            \resumeItem{Operate two JVM game servers with 8 GB memory heap caps administered through PufferPanel.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Personal Web Applications} $|$ \emph{Next.js, TypeScript, Flask, SQLite, Node.js, WebSockets}}{Nov 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{\textbf{Portfolio \& CMS}: Built and self-hosted a Next.js portfolio with a custom file-based MDX content management system, including an authenticated admin interface and REST API for creating, editing, and deleting blog and diary posts.}
+            \resumeItem{\textbf{Local Messaging App}: Developed a lightweight real-time group chat using Node.js and WebSockets, with message history for new users, persistent display names, input validation, and automatic reconnection.}
+            \resumeItem{\textbf{Poker Ledger}: Created a Flask and SQLite application for managing home poker sessions, tracking buy-ins, rebuys, cash-outs, and settlements while calculating player profits and a cumulative leaderboard.}
+          \resumeItemListEnd  
+    \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+
+      
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Python} \\
+     \textbf{Frameworks}{: React, Node.js, Flask} \\
+     \textbf{Developer Tools}{: Git, Docker} \\
+     \textbf{Libraries}{: pandas} \\
+     \textbf{Interests}{: Classical music, French horn, modern Tetris, my three cats}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
