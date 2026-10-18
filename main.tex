@@ -110,7 +110,7 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape David Kim} \\ \vspace{1pt}
+    \textbf{\Huge \scshape David Kim} \quad {\small U.S. Citizen} \\ \vspace{1pt}
     \small (650) 804-5445 $|$ \href{mailto:davidsehyunkim0@gmail.com}{\underline{davidsehyunkim0@gmail.com}} $|$ 
     \href{https://www.linkedin.com/in/david-kim-9a6a2927b/}{\underline{linkedin.com/in/david-kim-9a6a2927b/}} $|$
     \href{https://github.com/bulletpikachu}{\underline{github.com/bulletpikachu}}
@@ -126,18 +126,29 @@
     \resumeSubheading
       {De Anza College}{Cupertino, CA}
       {Coursework in Computer Science}{Sept. 2025 -- June 2026}
+    \resumeSubheading
+      {Emory University}{Atlanta, GA}
+      {Coursework in Computer Science}{Aug. 2024 -- June 2025}
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{LLM Discord Harness} $|$ \emph{Python, Docker, Github Actions, OpenRouter, Google AI Studio, SQLite}}{May 2026 -- Present}
+          {\href{https://github.com/bulletpikachu/nabemono-public}{\textbf{LLM Discord Harness}} $|$ \emph{Python, Docker, Github Actions, Google AI Studio, SQLite}}{May 2026 -- Present}
           \resumeItemListStart
             \resumeItem{Built a Python conversational LLM agent that runs at zero cost, sustaining 10 requests per minute continuously (14,400/day) within provider quotas.}
             \resumeItem{Built a CI/CD pipeline with GitHub Actions to automatically deploy changes from the main branch to the production server, where it is online 24/7 for use on a UCI club discord server with 100+ members. }
             \resumeItem{Built agent tools for live web search, HTML page fetch/extraction, and offline Wikipedia retrieval from a local Kiwix ZIM archive, with search-then-read so the model can follow snippets to full articles.}
             \resumeItem{Designed and implemented a two-tier memory system pairing a per-channel message short-term memory with SQLite-backed vector retrieval, embedding facts via FastEmbed (BGE), ranking by cosine similarity and importance, and deduplicating near-identical entries to keep injected context small.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://tcg.bulletmaji.me}{\textbf{BulletTCG}} $|$ \emph{Flask, SQLAlchemy, SQLite, JavaScript}}
+          {Oct. 2026 -- Present}
+          \resumeItemListStart
+             \resumeItem{Built and publicly deployed a full-stack trading-card collection platform with user accounts, advanced catalog search, live pricing, public sharing, following, and CSV and image exports.}
+             \resumeItem{Designed a SQLite-backed catalog synchronization and search system with paginated browsing, condition-price caching, scheduled data refreshes, and collection import and export.}
+             \resumeItem{Added CSRF protection, IP-based rate limiting, account and collection quotas, secure image proxying, and 112 automated Python and JavaScript tests.}
           \resumeItemListEnd
       \resumeProjectHeading
            {\textbf{Poker Ledger} $|$ \emph{Flask, Javascript, CSS, HTML, SQLite}}
@@ -146,13 +157,6 @@
              \resumeItem{Created a Flask and SQLite application for managing home poker sessions, tracking buy-ins, rebuys, cash-outs, and settlements while calculating player profits and a cumulative leaderboard.}
              \resumeItem{Deployed in local home games, tracking a 5-figure balance across many sessions for 37 unique players.}
            \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Election Validator} $|$ \emph{HTML, Javascript}}
-          {May 2026}
-          \resumeItemListStart
-             \resumeItem{Created a lightweight Javascript web app to count votes and verify election eligibility for De Anza’s Vietnamese Student Association, verifying 170 eligible club members.}
-             \resumeItem{Self-deployed 24/7 for board members to use in future years and elections on an OCI VPS.}
-          \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Cloud Server Management} $|$ \emph{Oracle Linux, Docker, Docker Compose, Caddy}}{Nov 2025 -- Present}
           \resumeItemListStart
@@ -172,9 +176,9 @@
       {California Youth Symphony}{Palo Alto, California}
       \resumeItemListStart
         \resumeItem{Created a lightweight real-time messaging app using Node.js and WebSockets, designed to be hosted on an offline local network to allow instant internal communication in an internet-dead forest.} 
-        \resumeItem{Achieved text communication from distances up to 200 ft by broadcasting a Wi-Fi signal from a consumer Macbook that any mobile device can connect and enter the chat with.}
         \resumeItem{Designed, organized, and led daily recreational and social activities for 100+ high school musicians, serving as the primary source of engagement outside rehearsals.}
       \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 %
 %-----------PROGRAMMING SKILLS-----------
