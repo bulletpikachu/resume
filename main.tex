@@ -11,7 +11,9 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\ifdefined\pdfglyphtounicode
+  \input{glyphtounicode}
+\fi
 
 
 %----------FONT OPTIONS----------
@@ -56,7 +58,9 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
 
 %-------------------------
 % Custom commands
@@ -143,11 +147,11 @@
             \resumeItem{Designed and implemented a two-tier memory system pairing a per-channel message short-term memory with SQLite-backed vector retrieval, embedding facts via FastEmbed (BGE), ranking by cosine similarity and importance, and deduplicating near-identical entries to keep injected context small.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\href{https://tcg.bulletmaji.me}{\textbf{BulletTCG}} $|$ \emph{Flask, SQLAlchemy, SQLite, JavaScript}}
+          {\href{https://tcg.bulletmaji.me}{\textbf{BulletTCG}} $|$ \emph{Python, Flask, NumPy, SQLite}}
           {Oct. 2026 -- Present}
           \resumeItemListStart
-             \resumeItem{Built and publicly deployed a full-stack trading-card collection platform with user accounts, advanced catalog search, live pricing, public sharing, following, and CSV and image exports.}
-             \resumeItem{Designed a SQLite-backed catalog synchronization and search system with paginated browsing, condition-price caching, scheduled data refreshes, and collection import and export.}
+             \resumeItem{Built and deployed a semantic search site for trading card artworks, using multimodal image/text embeddings and cosine similarity to retrieve cards by natural-language themes.}
+             \resumeItem{Designed a SQLite-backed vector index with NumPy ranking and cached query embeddings; added collections, live pricing, public sharing, and CSV and image exports.}
              \resumeItem{Added CSRF protection, IP-based rate limiting, account and collection quotas, secure image proxying, and 112 automated Python and JavaScript tests.}
           \resumeItemListEnd
       \resumeProjectHeading
