@@ -138,37 +138,35 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\href{https://tu.bulletmaji.me/}{\textbf{ttrm2mp4}} $|$ \emph{Electron, C++, Metal, Direct3D 11, NVENC}}{Nov 2026}
+          \resumeItemListStart
+            \resumeItem{Built an offline TETR.IO replay renderer that processed a \textbf{186-second} match in \textbf{17.8 seconds} on Apple M3 Pro (\textbf{10.4× real time}) using Metal rendering and GPU-side NV12 conversion.}
+            \resumeItem{Achieved \textbf{7.2× real time} on an NVIDIA RTX 2060 using parallel Direct3D 11 rendering and NVENC hardware H.264 encoding.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://tcg.bulletmaji.me}{\textbf{BulletTCG}} $|$ \emph{Python, Flask, NumPy, SQLite, Google AI Studio}}
+          {Oct. 2026 -- Present}
+          \resumeItemListStart
+             \resumeItem{Built and deployed a trading card search engine that uses Gemini Embedding 2 to match text and photo queries against \textbf{54,542 card images} across \textbf{625} sets, embedding a photo query in \textbf{$\sim$500 ms}.}
+             \resumeItem{Built a SQLite-backed vector index that ranks all \textbf{3,072-dim} vectors by exact NumPy cosine similarity in \textbf{16 ms} per query, with a query-embedding cache that saves \textbf{$\sim$300 ms} on  Gemini call on repeat searches.}
+             \resumeItem{Added collections, live pricing, public sharing, CSV and image exports, CSRF protection, IP-based rate limiting, account and collection quotas, and secure image proxying.}
+          \resumeItemListEnd
       \resumeProjectHeading
           {\href{https://github.com/bulletpikachu/nabemono-public}{\textbf{LLM Discord Harness}} $|$ \emph{Python, Docker, Github Actions, Google AI Studio, SQLite}}{May 2026 -- Present}
           \resumeItemListStart
-            \resumeItem{Built a Python conversational LLM agent that runs at zero cost, sustaining 10 requests per minute continuously (14,400/day) within provider quotas.}
-            \resumeItem{Built a CI/CD pipeline with GitHub Actions to automatically deploy changes from the main branch to the production server, where it is online 24/7 for use on a UCI club discord server with 100+ members. }
-            \resumeItem{Built agent tools for live web search, HTML page fetch/extraction, and offline Wikipedia retrieval from a local Kiwix ZIM archive, with search-then-read so the model can follow snippets to full articles.}
+            \resumeItem{Built a Python conversational LLM agent that's deployed \textbf{24/7} within free provider quotas.}
+            \resumeItem{Built a CI/CD pipeline with GitHub Actions to automatically deploy changes from the main branch to the production server, where it is deployed to a UCI club discord server with \textbf{100+ members}. }
+            \resumeItem{Built agent tools for live web search, HTML page fetch/extraction, and offline Wikipedia retrieval from a local Kiwix ZIM archive.}
             \resumeItem{Designed and implemented a two-tier memory system pairing a per-channel message short-term memory with SQLite-backed vector retrieval, embedding facts via FastEmbed (BGE), ranking by cosine similarity and importance, and deduplicating near-identical entries to keep injected context small.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\href{https://tcg.bulletmaji.me}{\textbf{BulletTCG}} $|$ \emph{Python, Flask, NumPy, SQLite}}
-          {Oct. 2026 -- Present}
-          \resumeItemListStart
-             \resumeItem{Built and deployed a semantic search site for trading card artworks, using multimodal image/text embeddings and cosine similarity to retrieve cards by natural-language themes.}
-             \resumeItem{Designed a SQLite-backed vector index with NumPy ranking and cached query embeddings; added collections, live pricing, public sharing, and CSV and image exports.}
-             \resumeItem{Added CSRF protection, IP-based rate limiting, account and collection quotas, secure image proxying, and 112 automated Python and JavaScript tests.}
           \resumeItemListEnd
       \resumeProjectHeading
            {\textbf{Poker Ledger} $|$ \emph{Flask, Javascript, CSS, HTML, SQLite}}
            {June 2026}
            \resumeItemListStart
              \resumeItem{Created a Flask and SQLite application for managing home poker sessions, tracking buy-ins, rebuys, cash-outs, and settlements while calculating player profits and a cumulative leaderboard.}
-             \resumeItem{Deployed in local home games, tracking a 5-figure balance across many sessions for 37 unique players.}
+             \resumeItem{Deployed in local home games, tracking a \textbf{5-figure balance} across many sessions for \textbf{37 unique players}.}
            \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Cloud Server Management} $|$ \emph{Oracle Linux, Docker, Docker Compose, Caddy}}{Nov 2025 -- Present}
-          \resumeItemListStart
-            \resumeItem{Administer a cloud VM instance on Oracle Cloud Infrastructure, hosting seven containerized services at zero monthly cost with 100+ days of continuous uptime.}
-            \resumeItem{Front all public traffic with Caddy as a reverse proxy handling automatic TLS across four subdomains.}
-            \resumeItem{Deploy Docker Compose stacks with restart policies for a \href{https://bulletmaji.me}{personal site}, a SearXNG search engine instance, a file-sharing/hosting app, and the LLM Discord harness running 24/7.}
-            \resumeItem{Operate two JVM game servers with 8 GB memory heap caps administered through PufferPanel.}
-          \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
@@ -180,7 +178,7 @@
       {California Youth Symphony}{Palo Alto, California}
       \resumeItemListStart
         \resumeItem{Created a lightweight real-time messaging app using Node.js and WebSockets, designed to be hosted on an offline local network to allow instant internal communication in an internet-dead forest.} 
-        \resumeItem{Designed, organized, and led daily recreational and social activities for 100+ high school musicians, serving as the primary source of engagement outside rehearsals.}
+        \resumeItem{Designed, organized, and led daily recreational and social activities for \textbf{100+ high school musicians}, serving as the primary source of engagement outside rehearsals.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
