@@ -4,3 +4,6 @@
 !.gitignore
 !*.tex
 !*.pdf
+
+# Don't commit personal transcripts
+transcripts/
